@@ -22,7 +22,7 @@ class Niveau
      *@return
      */
     public function afficherNiveau(){
-        $sql = "SELECT * FROM ".$this->table;
+        $sql = "SELECT * FROM ".$this->table." LIMIT 4";
         $query = $this->connexion->prepare($sql);
         $query->execute();
         $resultats=$query->fetchAll(PDO::FETCH_ASSOC);

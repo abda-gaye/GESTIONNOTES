@@ -1,9 +1,9 @@
 <?php
-class Etudiant
+class Annee
 {
     //connexion
-    private $connexion;
-    private $table = "annee_scolaire";
+    public $connexion;
+    private $table = "Annee_scolaire";
 
     //proprietes
     public $id;
@@ -20,8 +20,8 @@ class Etudiant
      * affichage des Classe
      *@return
      */
-    public function afficherClasse(){
-        $sql = "SELECT * FROM ".$this->table;
+    public function afficherAnnee(){
+        $sql = "SELECT * FROM ".$this->table." LIMIT 4";
         $query = $this->connexion->prepare($sql);
         $query->execute();
         return $query;

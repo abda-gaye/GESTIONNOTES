@@ -1,5 +1,13 @@
 <?php
     require_once "./includes/header.php";
+    require_once "../models/Database.php";
+    require_once "../models/Etudiant.php";
+    $database = new Database();
+    $db = $database->getConnection();
+    $etudiant = new Etudiant($db);
+    $resultats=$etudiant->afficherEtudiant();
+
+
 ?>
  
  <!--  -->
@@ -11,6 +19,7 @@
 <table class="table table-hover table-style">
 <thead>
         <tr>
+            <th scope="col">ID</th>
             <th scope="col">Nom</th>
             <th scope="col">Prenom</th>
             <th scope="col">Numero</th>
@@ -19,39 +28,22 @@
         </tr>
       </thead>
       <tbody>
+        <?php foreach ($resultats as $resultat){ ?>
         <tr>
-          <td>Ndiaye</td>
-          <td>Fadal</td>
-          <td>10</td>
-          <td>18-11-1998</td>
+          <td><?=$resultat["id"]?></td>
+          <td><?=$resultat["nom"]?></td>
+          <td><?=$resultat["prenom"]?></td>
+          <td><?=$resultat["numero"]?></td>
+          <td><?=$resultat["date_naissance"]?></td>
           <td>
             <button  class="btn btn-primary"><a href="#"></a>voir</button>
             <button class="btn"><a href="#"></a>modifier</button>
             <button class="btn btn-danger"><a href="#"></a>supprimer</button>
           </td>
         </tr>
-        <tr>
-          <td>Sagna</td>
-          <td>Moussa</td>
-          <td>130</td>
-          <td>20-02-2000</td>
-          <td>
-            <button  class="btn btn-primary"><a href="#"></a>voir</button>
-            <button class="btn"><a href="#"></a>modifier</button>
-            <button class="btn btn-danger"><a href="#"></a>supprimer</button>
-          </td>
-        </tr>
-        <tr>
-          <td>Doucoure</td>
-          <td>Mohamed</td>
-          <td>1</td>
-          <td>11-12-2003</td>
-          <td>
-            <button  class="btn btn-primary"><a href="#"></a>voir</button>
-            <button class="btn "><a href="#"></a>modifier</button>
-            <button class="btn btn-danger"><a href="#"></a>supprimer</button>
-          </td>
-        </tr>
+        <?php
+        }
+        ?>
       </tbody>
 </table>
 <!-- table -->
