@@ -1,0 +1,63 @@
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.navbar{
+    margin-bottom: 80px;
+    color: #fff;
+    justify-content: end;
+}
+.f{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    margin-left: 700px;
+}
+.navbar-brand{
+    margin-left: 100px;
+}
+.container-login{
+    background-color: #212529;
+}
+.collapse{
+    margin-left: 80px;
+}
+.inscrire{
+    color: #fff;
+}
+.btn-logout{
+    margin-left: 900px;
+
+}
+.table-style{
+    border-collapse: collapse;
+    min-width: 3000px;
+    width: auto;
+    box-shadow: 0px 2px 4px black;
+    margin: 100px auto;
+}
+.add-student{
+    margin-left: 30px;
+}
+.card-height{
+    height: 60vh;
+}
+.form-C{
+    width: 100%;
+}
+.form-form{
+    width: 60%;
+
+    height: auto;
+   
+    position: absolute;
+   
+    left: 50%;
+   
+    top: 50%;
+   
+    transform: translate(-50%, -50%);
+   
+    -webkit-transform: translate(-50%, -50%);
+}
+
