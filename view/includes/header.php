@@ -8,7 +8,3 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap/css/mdb.min.css">
     <link rel="stylesheet" href="../view/css/style.css">
-
-
-</head>
-<body>
